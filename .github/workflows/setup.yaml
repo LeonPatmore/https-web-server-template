@@ -56,7 +56,7 @@ jobs:
             domain="$(echo $INFO | jq -r .repository.description)"
           popd
           mv /tmp/$REPO_NAME/* .
-          rm .github/workflows/setup.yml
+          rm .github/workflows/setup.yaml
       - name: Force push new repo contents
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
